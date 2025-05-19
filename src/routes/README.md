@@ -14,8 +14,6 @@
 | `GET`   | `/api/users/:userId` | Get a user's public profile    | `userId` (URL param)                  |
 | `GET`   | `/api/users/search`  | Search users by username/email | `query` (Query param)                 |
 
----
-
 ## **2. Server (Guild) Routes**
 
 ### **Server Management**
@@ -28,8 +26,6 @@
 | `DELETE` | `/api/servers/:serverId`         | Delete a server            | `serverId` (URL param)     |
 | `GET`    | `/api/servers/:serverId/members` | List server members        | `serverId` (URL param)     |
 | `POST`   | `/api/servers/:serverId/invites` | Generate invite link       | `{ expiresAt?, maxUses? }` |
-
----
 
 ## **3. Channel Routes**
 
@@ -44,8 +40,6 @@
 | `GET`    | `/api/channels/:channelId/messages` | List messages       | `limit?, before? (pagination)`          |
 | `POST`   | `/api/channels/:channelId/messages` | Send a message      | `{ content, parentMessageId? (reply) }` |
 
----
-
 ## **4. Message Routes**
 
 ### **Message Operations**
@@ -57,8 +51,6 @@
 | `DELETE` | `/api/messages/:messageId`                  | Delete a message | `messageId` (URL param) |
 | `POST`   | `/api/messages/:messageId/reactions/:emoji` | Add reaction     | `emoji` (URL param)     |
 | `DELETE` | `/api/messages/:messageId/reactions/:emoji` | Remove reaction  | `emoji` (URL param)     |
-
----
 
 ## **5. Role & Permission Routes**
 
@@ -72,8 +64,6 @@
 | `POST`   | `/api/servers/:serverId/members/:userId/roles/:roleId` | Assign role   | `userId`, `roleId`                |
 | `DELETE` | `/api/servers/:serverId/members/:userId/roles/:roleId` | Remove role   | `userId`, `roleId`                |
 
----
-
 ## **6. DM & Group DM Routes**
 
 ### **Direct Messaging**
@@ -85,8 +75,6 @@
 | `POST`   | `/api/group-dms/:groupId/invite` | Invite user to group DM | `{ userId }`          |
 | `DELETE` | `/api/group-dms/:groupId/leave`  | Leave a group DM        | `groupId` (URL param) |
 
----
-
 ## **7. Voice Channel Routes**
 
 ### **Voice Chat Management**
@@ -96,8 +84,6 @@
 | `POST` | `/api/voice/join`                    | Join a voice channel    | `{ channelId }`         |
 | `POST` | `/api/voice/leave`                   | Leave voice channel     | (Requires Auth)         |
 | `GET`  | `/api/voice/:channelId/participants` | List voice participants | `channelId` (URL param) |
-
----
 
 ## **8. Invite Routes**
 
